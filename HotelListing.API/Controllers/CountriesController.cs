@@ -95,7 +95,7 @@ namespace HotelListing.API.Controllers
         }
 
         [HttpDelete("{id}")]
-        [Authorize(Roles ="Adminstator")]
+        [Authorize(Roles ="Administrator")]
         public async Task<IActionResult> DeleteCountry(int id)
         {
             var country = await _countriesRepository.GetAsync(id);
